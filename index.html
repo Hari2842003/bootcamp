@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Area Calculator</title>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+    <form>
+        Length: <input type="number" id="length" step="any" required><br>
+        Width: <input type="number" id="width" step="any" required><br>
+        <input type="button" value="Calculate Area" onclick="calculateArea()">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function calculateArea() {
+            // Get the values of length and width from the user
+            const length = parseFloat(document.getElementById('length').value);
+            const width = parseFloat(document.getElementById('width').value);
+
+            // Calculate the area
+            const area = length * width;
+
+            // Display the result
+            document.getElementById('result').innerHTML = `Area: ${area}`;
+        }
+    </script>
+</body>
+</html>
